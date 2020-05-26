@@ -2,24 +2,24 @@
 class GatewayGo < Formula
   desc "OpenIoTHub GateWay"
   homepage "http://github.com/OpenIoTHub"
-  version "0.1.70"
+  version "0.1.72"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.70/gateway-go_0.1.70_Darwin_x86_64.tar.gz"
-    sha256 "669ba4d4b31842eb78bab6b131c029d6fe96bb4b23417c02772f87e0cf84485b"
+    url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.72/gateway-go_0.1.72_Darwin_x86_64.tar.gz"
+    sha256 "a88d0d6356968b87b65b3b65cfc673a16d8443b9d33888e68067f207bc42b110"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.70/gateway-go_0.1.70_Linux_x86_64.tar.gz"
-      sha256 "4eaf23fc7a94936749ec4b04669f922f98268024cb13478dd70111ca9bff16f7"
+      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.72/gateway-go_0.1.72_Linux_x86_64.tar.gz"
+      sha256 "45b1509c9935cb83c06f17ff4b6761026b57bd8d97c5ba068743212c27dbaf5b"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.70/gateway-go_0.1.70_Linux_arm64.tar.gz"
-        sha256 "cb4fc989b52c210c4689b2026d357f1721cef55cd1c6ee31c2b44cbd2cad7d57"
+        url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.72/gateway-go_0.1.72_Linux_arm64.tar.gz"
+        sha256 "12943178ec9b067c03f0900fe6f5e6ad1fe1414e31d1d6e3da349168a2e3e532"
       else
-        url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.70/gateway-go_0.1.70_Linux_armv6.tar.gz"
-        sha256 "1a325802d52bfb590f9be20b2511a4230e3083fb915e7ccf9067e64c2c32c71f"
+        url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.1.72/gateway-go_0.1.72_Linux_armv6.tar.gz"
+        sha256 "59cc308364512ecfc8350ad333ab34441b6e6be3163bae27c2d26e5bdab0a48d"
       end
     end
   end
