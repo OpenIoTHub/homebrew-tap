@@ -2,24 +2,24 @@
 class ServerGo < Formula
   desc "OpenIoTHub Server"
   homepage "http://github.com/OpenIoTHub"
-  version "1.1.45"
+  version "1.1.46"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.45/server-go_1.1.45_Darwin_x86_64.tar.gz"
-    sha256 "2cd229c3eb4373d708b0e812808ec986c9a654d9f260615771e0b244db3e10b0"
+    url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.46/server-go_1.1.46_Darwin_x86_64.tar.gz"
+    sha256 "7759a773427737a84c01c73ed215eaff4c4060e4b6b5a2aa6c833fe490d69488"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.45/server-go_1.1.45_Linux_x86_64.tar.gz"
-      sha256 "eb4b9657629709ec416734e72358fe8c6c7a24ff6b6637f8fec519cd22c04b2d"
+      url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.46/server-go_1.1.46_Linux_x86_64.tar.gz"
+      sha256 "58a38f00429d7c71a0f6b11b0610cc78b7c63e2700c8ab600c408a9016683b62"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.45/server-go_1.1.45_Linux_arm64.tar.gz"
-        sha256 "decbf3f462e6db15e76bcfc8a35370b556dbab97790dc351238d9bdfa3c4e905"
+        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.46/server-go_1.1.46_Linux_arm64.tar.gz"
+        sha256 "442920b35de9a2ba465982d4020561cb80c0f61f840f95f6f553ac9c2fd2bd3f"
       else
-        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.45/server-go_1.1.45_Linux_armv6.tar.gz"
-        sha256 "851e3138fd01b6e7aaf64fdebfdc9b22e095bde469b8dc109c5745a03ce113ba"
+        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.1.46/server-go_1.1.46_Linux_armv6.tar.gz"
+        sha256 "96c6228e68aec564629cf3625f686e6701f91d865fbbc47743d3541510ee8fc2"
       end
     end
   end
