@@ -5,24 +5,24 @@
 class Getip < Formula
   desc "OpenIoTHub get my public ip"
   homepage "http://github.com/OpenIoTHub"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.1/getip_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "f050bb812353e6e9d86b0bc7a5cdef0422e0976c787b30c037769160d3bd0323"
+    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Darwin_x86_64.tar.gz"
+    sha256 "c017f8fea46b8aa4c25a3067b16c81517ea43542a8bd85baf163d09c72eda212"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.1/getip_0.1.1_Linux_x86_64.tar.gz"
-    sha256 "b14a081dd89b5a24d8496258bde7df633c473a4b08568c5fe889770d2ac8f655"
+    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Linux_x86_64.tar.gz"
+    sha256 "fda4c7295586278a057597c00ae13ca4a8d5e092b687cb7c5f2ce3cfb258cf8e"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.1/getip_0.1.1_Linux_armv6.tar.gz"
-    sha256 "d0732826313722b8513e6c5ff8df568fae390996b3797e32008a22befba203da"
+    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Linux_armv6.tar.gz"
+    sha256 "5ce3b62040353883e67abd5e41b8a295c47846cc2a2dc949c90d9d27b319f406"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.1/getip_0.1.1_Linux_arm64.tar.gz"
-    sha256 "7017f6e1a4c9def6e5e6c46deda3d7936dea6a0685d7f8bdbf7124623b5553f8"
+    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Linux_arm64.tar.gz"
+    sha256 "3070bb61f892c326c365d09bdaf829469d994b49f7238d6abe4c82a7572a4801"
   end
 
   def install
