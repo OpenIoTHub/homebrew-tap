@@ -5,24 +5,24 @@
 class OnvifViewer < Formula
   desc "Onvif Camera Viewer"
   homepage "https://github.com/mDNSService/onvif-viewer"
-  version "1.3-debug"
+  version "1.3-debug2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug/onvif-viewer_1.3-debug_Darwin_x86_64.tar.gz"
-    sha256 "f9ceb1980aeabecb4110e38048d056600bde27197757929c3c907d5f2cfa1e83"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Darwin_x86_64.tar.gz"
+    sha256 "c2649b5e4781490d009eec2877c27c2d4761c0cad22d729b82937b8fffc53ef1"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug/onvif-viewer_1.3-debug_Linux_x86_64.tar.gz"
-    sha256 "637aeebb9011f54dd1694b31a52fc9eda964b6ea27a1d8f364ecb8ee17c12fc3"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Linux_x86_64.tar.gz"
+    sha256 "aae63bf79f6c085b75fe3d6f94254f470754c9864b55e5a867401e24c6642032"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug/onvif-viewer_1.3-debug_Linux_armv6.tar.gz"
-    sha256 "676a9aadefcfe9854be29f54186c16c3ea23f822e037ef6068dc2d2d98bd286d"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Linux_armv6.tar.gz"
+    sha256 "c96c30e2e74adc3d95e8ecfecf72fb7dc3e2a55e6b1c9c3d34b4520b59964802"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug/onvif-viewer_1.3-debug_Linux_arm64.tar.gz"
-    sha256 "9f10d52f5bedc7807b6f83ea23b9ca518c3d1642bb540ce275e4db899bcbde2d"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Linux_arm64.tar.gz"
+    sha256 "80df308fd0d3331248bac242da801a60450efde56740418f5f32d7520eaaa9c6"
   end
 
   def install
