@@ -5,24 +5,24 @@
 class OnvifViewer < Formula
   desc "Onvif Camera Viewer"
   homepage "https://github.com/mDNSService/onvif-viewer"
-  version "1.3-debug2"
+  version "1.3-debug3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Darwin_x86_64.tar.gz"
-    sha256 "c2649b5e4781490d009eec2877c27c2d4761c0cad22d729b82937b8fffc53ef1"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug3/onvif-viewer_1.3-debug3_Darwin_x86_64.tar.gz"
+    sha256 "716aa29c90a819be2d247538108120b7ae68f7c6de28de3996001a3ca7fbd39e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Linux_x86_64.tar.gz"
-    sha256 "aae63bf79f6c085b75fe3d6f94254f470754c9864b55e5a867401e24c6642032"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug3/onvif-viewer_1.3-debug3_Linux_x86_64.tar.gz"
+    sha256 "a7ffbca407ca4ef9e77e5eb5540036aa9217822695219a65598f98da316636b7"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Linux_armv6.tar.gz"
-    sha256 "c96c30e2e74adc3d95e8ecfecf72fb7dc3e2a55e6b1c9c3d34b4520b59964802"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug3/onvif-viewer_1.3-debug3_Linux_armv6.tar.gz"
+    sha256 "74b11130d9fb247097d614b9faa69f1b258fff0a8dd8bd49f0635624ec4e17c5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug2/onvif-viewer_1.3-debug2_Linux_arm64.tar.gz"
-    sha256 "80df308fd0d3331248bac242da801a60450efde56740418f5f32d7520eaaa9c6"
+    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.3-debug3/onvif-viewer_1.3-debug3_Linux_arm64.tar.gz"
+    sha256 "4539e7258f0b5a52c8e37777c8df159797c8f030345efcdd9535e24bf056fe4e"
   end
 
   def install
