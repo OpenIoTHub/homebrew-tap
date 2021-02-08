@@ -5,24 +5,24 @@
 class PhicommR1Controler < Formula
   desc "Phicomm R1 Controler"
   homepage "https://github.com/IoTDevice/phicomm-r1-controler"
-  version "0.0.6"
+  version "0.0.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.6/phicomm-r1-controler_0.0.6_Darwin_x86_64.tar.gz"
-    sha256 "bb579a2611960f15ff86daf90d23b74e60ddc96a10d14905c3a648cf7443e8ff"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.7/phicomm-r1-controler_0.0.7_Darwin_x86_64.tar.gz"
+    sha256 "c14de3c737f4fce4431fc92e8c50dbe038fa1384ca1f9945d4acdae7a1016b5d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.6/phicomm-r1-controler_0.0.6_Linux_x86_64.tar.gz"
-    sha256 "a9cac567132e909c0cc2d523da47b083848eb4532deb2987d920ed35aa139c21"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.7/phicomm-r1-controler_0.0.7_Linux_x86_64.tar.gz"
+    sha256 "8789531b722e8e83fd5f423a7657b5d9b143d856a1587425934c3cb0840f26dc"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.6/phicomm-r1-controler_0.0.6_Linux_armv6.tar.gz"
-    sha256 "7a77c958a569e35acf77d72a84971cc8ac54bd5cdca53413feb53ede1baa3f9b"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.7/phicomm-r1-controler_0.0.7_Linux_armv6.tar.gz"
+    sha256 "9b509dee4c243dab907144dd77814c485747d44276eb5b057a02b0c26e4ac864"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.6/phicomm-r1-controler_0.0.6_Linux_arm64.tar.gz"
-    sha256 "5a697b5016b6689504415942ce437a6356ba7b62aea38fab94db7bd6312e85ec"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.7/phicomm-r1-controler_0.0.7_Linux_arm64.tar.gz"
+    sha256 "039cb9672f982ca79340918b339a7a10d88cee7f3b7e024fe94765a4947f28ed"
   end
 
   def install
