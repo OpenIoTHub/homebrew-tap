@@ -5,24 +5,24 @@
 class Zeroconf < Formula
   desc "mdns service finder"
   homepage "https://github.com/IoTDevice/zeroconf"
-  version "0.1.9"
+  version "0.1.10"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.9/zeroconf_0.1.9_Darwin_x86_64.tar.gz"
-    sha256 "c6116ac39544246bc701ffe8f79ecb12e41ec5f9370fee22b4f9a372e18e2d5e"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Darwin_x86_64.tar.gz"
+    sha256 "2702bf17b8dedd0ad29e50bcbb8a4d2cf7441479fb41ed7fbefb409e73543a8f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.9/zeroconf_0.1.9_Linux_x86_64.tar.gz"
-    sha256 "559bfc6d38dc8b7f63710c8cc17cc348df849379684ee0cc79530512fe5a4670"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Linux_x86_64.tar.gz"
+    sha256 "b9f9ad6aad1e18715047ccd3e3b75c34151e1b8b99174f1dff40d1e9a3d6c957"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.9/zeroconf_0.1.9_Linux_armv6.tar.gz"
-    sha256 "b45c1dc761212664a48e19987274657f16ef8fa5e275daaa325c297e2c650eb5"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Linux_armv6.tar.gz"
+    sha256 "bce0d75780b247ac3f9809b5348c5e6c6e16ca3b062b4aec432ce59da481b7f2"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.9/zeroconf_0.1.9_Linux_arm64.tar.gz"
-    sha256 "7c6f0cdf684436ead46e911a88bb2400c6689138d6a91a7b414b96e1ea9949d5"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Linux_arm64.tar.gz"
+    sha256 "6db09ee38ef401b71ebcf3000591d54f44bae20706c12091a0982818f23109d2"
   end
 
   def install
