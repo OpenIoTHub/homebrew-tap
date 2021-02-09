@@ -5,24 +5,24 @@
 class PhicommR1Controler < Formula
   desc "Phicomm R1 Controler"
   homepage "https://github.com/IoTDevice/phicomm-r1-controler"
-  version "0.0.8"
+  version "0.0.10"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.8/phicomm-r1-controler_0.0.8_Darwin_x86_64.tar.gz"
-    sha256 "79a3b4aaf3fca3d71da49e6829903c1914035dcf8bd0221f1186a34928710bd1"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.10/phicomm-r1-controler_0.0.10_Darwin_x86_64.tar.gz"
+    sha256 "f695df2fefec371b6ac7e3a1e462a1d15afe74dbadfc3765fd2f6d9b7a8aadc2"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.8/phicomm-r1-controler_0.0.8_Linux_x86_64.tar.gz"
-    sha256 "a55ee55edac5997fd6eb32d48d5f2bfbd2c370b41284c5024bd4aed666f40d88"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.10/phicomm-r1-controler_0.0.10_Linux_x86_64.tar.gz"
+    sha256 "f404f119965dfff933469dace2d62d3dc85608ca5e1bd8359a4cf29256b3ab93"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.8/phicomm-r1-controler_0.0.8_Linux_armv6.tar.gz"
-    sha256 "26d04d704294acd4c7fdaeb43ab248f9a407724e9055599f97c59cfdfd6e09a2"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.10/phicomm-r1-controler_0.0.10_Linux_armv6.tar.gz"
+    sha256 "1243dbeeecbaf26f2f1d3d5e1d5d336974c5f6e383beb557a4701e6e11b5e16b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.8/phicomm-r1-controler_0.0.8_Linux_arm64.tar.gz"
-    sha256 "d4f25c92fe958ce08bc22d01f080fa5b9c7a8b42ed4c48a3fb981c64d988f664"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.10/phicomm-r1-controler_0.0.10_Linux_arm64.tar.gz"
+    sha256 "e0b3983882c1e14b353c2473c6c81b067f16594fc8de2690e52ab9ed56afd2f4"
   end
 
   def install
