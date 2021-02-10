@@ -5,24 +5,24 @@
 class PhicommR1Controler < Formula
   desc "Phicomm R1 Controler"
   homepage "https://github.com/IoTDevice/phicomm-r1-controler"
-  version "0.0.11"
+  version "0.0.12"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.11/phicomm-r1-controler_0.0.11_Darwin_x86_64.tar.gz"
-    sha256 "aed59b62a519ade6e035d150acda0054de960441f4c69fe46e6b80b20fa1b668"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Darwin_x86_64.tar.gz"
+    sha256 "c0166f4c3220cbf7a59c146127b430de7480c5fa7e59a3d26e2abe9392e27249"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.11/phicomm-r1-controler_0.0.11_Linux_x86_64.tar.gz"
-    sha256 "2ac4cf0acaf6524eeb54aaf77d560622a472351e6b4e0d1dc068bfc21b77f7b5"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Linux_x86_64.tar.gz"
+    sha256 "efa800031b3548f1935fae5867d3ea8ad76c203baeb999d659a770f942f0f16e"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.11/phicomm-r1-controler_0.0.11_Linux_armv6.tar.gz"
-    sha256 "65e028d9f903f3a964db296888ea562a61126e371d3315f51d369f3fd01f6a08"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Linux_armv6.tar.gz"
+    sha256 "e721a0d32b43debb9938df6baa08732b550ea5a5a24aa1a798115c9a765cf28e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.11/phicomm-r1-controler_0.0.11_Linux_arm64.tar.gz"
-    sha256 "72855e8a3dcb502841a6b8aeb857464b935bac67ef255a0e09b18c6904a9bb40"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Linux_arm64.tar.gz"
+    sha256 "b8cce382dbb02037e5de8a10d991b22084c6c3103c891d4bdd84dc2729284b85"
   end
 
   def install
