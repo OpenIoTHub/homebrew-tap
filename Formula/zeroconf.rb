@@ -5,24 +5,28 @@
 class Zeroconf < Formula
   desc "mdns service finder"
   homepage "https://github.com/IoTDevice/zeroconf"
-  version "0.1.10"
+  version "0.1.12"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Darwin_x86_64.tar.gz"
-    sha256 "2702bf17b8dedd0ad29e50bcbb8a4d2cf7441479fb41ed7fbefb409e73543a8f"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Darwin_x86_64.tar.gz"
+    sha256 "97d21ef8d4663e92782cc44cca01c9198a605a8ac20afef827287df0eadf7417"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Darwin_arm64.tar.gz"
+    sha256 "edbb0297486af8bfa11d4ec1d15f71f9c775a3a81461439e66904e4b4cfb9d61"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Linux_x86_64.tar.gz"
-    sha256 "b9f9ad6aad1e18715047ccd3e3b75c34151e1b8b99174f1dff40d1e9a3d6c957"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Linux_x86_64.tar.gz"
+    sha256 "0765e661c385649eec05702366332b21038ee7f7b4506369e8ab5f744aade417"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Linux_armv6.tar.gz"
-    sha256 "bce0d75780b247ac3f9809b5348c5e6c6e16ca3b062b4aec432ce59da481b7f2"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Linux_armv6.tar.gz"
+    sha256 "fc7774b6aa114a46a35b56dedfa91e049430c7db1e5016dbaf0c43d9494518f8"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.10/zeroconf_0.1.10_Linux_arm64.tar.gz"
-    sha256 "6db09ee38ef401b71ebcf3000591d54f44bae20706c12091a0982818f23109d2"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Linux_arm64.tar.gz"
+    sha256 "202a1dbd0e117a6c3c375512e21b7aed8c5cf6ca1b84721df7b19467110756ab"
   end
 
   def install
