@@ -5,24 +5,24 @@
 class PhicommR1Controler < Formula
   desc "Phicomm R1 Controler"
   homepage "https://github.com/IoTDevice/phicomm-r1-controler"
-  version "0.0.12"
+  version "0.0.13"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Darwin_x86_64.tar.gz"
-    sha256 "c0166f4c3220cbf7a59c146127b430de7480c5fa7e59a3d26e2abe9392e27249"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.13/phicomm-r1-controler_0.0.13_Darwin_x86_64.tar.gz"
+    sha256 "6d8d8427939c948373fc4e73cb653e76a4c129dcda726f4a731e89f51108902e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Linux_x86_64.tar.gz"
-    sha256 "efa800031b3548f1935fae5867d3ea8ad76c203baeb999d659a770f942f0f16e"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.13/phicomm-r1-controler_0.0.13_Linux_x86_64.tar.gz"
+    sha256 "b879a8a3475793354f395cc976715d3d1c4ce38d0903384ec19a0cfcc24692d2"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Linux_armv6.tar.gz"
-    sha256 "e721a0d32b43debb9938df6baa08732b550ea5a5a24aa1a798115c9a765cf28e"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.13/phicomm-r1-controler_0.0.13_Linux_armv6.tar.gz"
+    sha256 "e2f56633329c220ceecf0a081bb6f9a1d74a1c40ef58daa7d283924ff8ed69ae"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.12/phicomm-r1-controler_0.0.12_Linux_arm64.tar.gz"
-    sha256 "b8cce382dbb02037e5de8a10d991b22084c6c3103c891d4bdd84dc2729284b85"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.13/phicomm-r1-controler_0.0.13_Linux_arm64.tar.gz"
+    sha256 "c41de458f87eb92fd68cf38550b0189c3f1a0f36b3fc7dc912cf6c64fb29e2ea"
   end
 
   def install
