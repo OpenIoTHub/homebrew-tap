@@ -5,24 +5,24 @@
 class PhicommR1Controler < Formula
   desc "Phicomm R1 Controler"
   homepage "https://github.com/IoTDevice/phicomm-r1-controler"
-  version "0.0.14-debug-2"
+  version "0.0.15"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.14-debug-2/phicomm-r1-controler_0.0.14-debug-2_Darwin_x86_64.tar.gz"
-    sha256 "11ce351a536ca32e0d02abe674c264ddcbd2e2cbaea62924842b6d1600c55e85"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.15/phicomm-r1-controler_0.0.15_Darwin_x86_64.tar.gz"
+    sha256 "2f5a0b1c48f081f78868f399da4148eef7c2726ca42c2c9c640fa964713f9f7e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.14-debug-2/phicomm-r1-controler_0.0.14-debug-2_Linux_x86_64.tar.gz"
-    sha256 "7004025ebcad4d772bb1ca1cbfba13e3adecb002fe1e508c599ea54aff19ca37"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.15/phicomm-r1-controler_0.0.15_Linux_x86_64.tar.gz"
+    sha256 "8bbf0b9aa84558598f1883d9f9a4c20f695809be2358cefed9f49b730a889887"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.14-debug-2/phicomm-r1-controler_0.0.14-debug-2_Linux_armv6.tar.gz"
-    sha256 "a46d09889948c424efe213a924e8bf10b2c05520ab6a479e476c9c4e5940ca8c"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.15/phicomm-r1-controler_0.0.15_Linux_armv6.tar.gz"
+    sha256 "fa72da084ee6cf52494cdf22f56628a44b6482a8452906d7d1500303fbc0435a"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.14-debug-2/phicomm-r1-controler_0.0.14-debug-2_Linux_arm64.tar.gz"
-    sha256 "df88b57dc8f9e8a27b62406c8b1e6433ee70eb486f013e6c0a74541cf2140420"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.15/phicomm-r1-controler_0.0.15_Linux_arm64.tar.gz"
+    sha256 "7de4bd346c0eb860341d13cdbd02a3a30269bd3ef0223495c3f45fe87178c777"
   end
 
   def install
