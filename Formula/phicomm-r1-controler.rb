@@ -5,24 +5,24 @@
 class PhicommR1Controler < Formula
   desc "Phicomm R1 Controler"
   homepage "https://github.com/IoTDevice/phicomm-r1-controler"
-  version "0.0.21"
+  version "0.0.22"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.21/phicomm-r1-controler_0.0.21_Darwin_x86_64.tar.gz"
-    sha256 "f554fc169d540d84615e2dbf1790a230462d606a52cfe69174223e9695bfbb4d"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.22/phicomm-r1-controler_0.0.22_Darwin_x86_64.tar.gz"
+    sha256 "116c86f6b2776b4b2935a5c7a5cebd453dcdcc8675fcbb347fa684ef329d9740"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.21/phicomm-r1-controler_0.0.21_Linux_x86_64.tar.gz"
-    sha256 "ceae3e8e9f38c450c4fdf1bd8733d53a379291494f159386e00aade453f5bcf3"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.22/phicomm-r1-controler_0.0.22_Linux_x86_64.tar.gz"
+    sha256 "612923f4f8e9ce9245cbc6b70766e166d51ca06482e97d88bd7bda2e2c9e795f"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.21/phicomm-r1-controler_0.0.21_Linux_armv6.tar.gz"
-    sha256 "d656e953168a392f79e6685413c6cc747be3a8b558a8fa5e34dc1fa00b591683"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.22/phicomm-r1-controler_0.0.22_Linux_armv6.tar.gz"
+    sha256 "a9ffec6ddeb335b9387d7d4cbe6bbcef8a92057466f84f4b537a05461a9198bd"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.21/phicomm-r1-controler_0.0.21_Linux_arm64.tar.gz"
-    sha256 "2f745d93e36adfc596ba670c1b5553d86391a7a195985579dffcf97b6fa4fb1a"
+    url "https://github.com/IoTDevice/phicomm-r1-controler/releases/download/v0.0.22/phicomm-r1-controler_0.0.22_Linux_arm64.tar.gz"
+    sha256 "c94888b0886742e9c025301783eb8227185f5bd850ce06eb0b341fcc44370805"
   end
 
   def install
