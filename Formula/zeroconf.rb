@@ -5,28 +5,28 @@
 class Zeroconf < Formula
   desc "mdns service finder"
   homepage "https://github.com/IoTDevice/zeroconf"
-  version "0.1.12"
+  version "0.1.13"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Darwin_x86_64.tar.gz"
-    sha256 "97d21ef8d4663e92782cc44cca01c9198a605a8ac20afef827287df0eadf7417"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.13/zeroconf_0.1.13_Darwin_x86_64.tar.gz"
+    sha256 "95a010b20f62a1675100f6db653cba05970dedbeba80e855dad3ba6937f85b7a"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Darwin_arm64.tar.gz"
-    sha256 "edbb0297486af8bfa11d4ec1d15f71f9c775a3a81461439e66904e4b4cfb9d61"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.13/zeroconf_0.1.13_Darwin_arm64.tar.gz"
+    sha256 "5874cd175b3e9e4a29e9017aa3c4980544f9d18ea54659bfd5cb478d336a2001"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Linux_x86_64.tar.gz"
-    sha256 "0765e661c385649eec05702366332b21038ee7f7b4506369e8ab5f744aade417"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.13/zeroconf_0.1.13_Linux_x86_64.tar.gz"
+    sha256 "d5fd928920b2e8d97e557a6d20210e582ac81896478f37b2301d0e214c173985"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Linux_armv6.tar.gz"
-    sha256 "fc7774b6aa114a46a35b56dedfa91e049430c7db1e5016dbaf0c43d9494518f8"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.13/zeroconf_0.1.13_Linux_armv6.tar.gz"
+    sha256 "0cf02b2a13be0a3295f89497b2c993b27a1375175a0c756ffabc11321180d1fb"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.12/zeroconf_0.1.12_Linux_arm64.tar.gz"
-    sha256 "202a1dbd0e117a6c3c375512e21b7aed8c5cf6ca1b84721df7b19467110756ab"
+    url "https://github.com/IoTDevice/zeroconf/releases/download/v0.1.13/zeroconf_0.1.13_Linux_arm64.tar.gz"
+    sha256 "22b77d089fd138cc300749efec0cb6149d4df27a2258eadbab50428fcfad71dd"
   end
 
   def install
