@@ -5,24 +5,29 @@
 class Aliddns < Formula
   desc "Aliyun ddns service"
   homepage "http://github.com/OpenIoTHub"
-  version "0.0.9"
+  version "0.0.10"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.9/aliddns_0.0.9_Darwin_x86_64.tar.gz"
-    sha256 "0aa79cb84661cb7168fc36fda84cf09a9a2d8219143ccad104eee8a1736a6db0"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.10/aliddns_0.0.10_Darwin_x86_64.tar.gz"
+      sha256 "e3b66b46e86ac218d92ffb5873e9eabcc9187a25486ce88c2052f276afeb511f"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.9/aliddns_0.0.9_Linux_x86_64.tar.gz"
-    sha256 "45879899eea6bcc883f4e8b6d9eac1e9c5a8d19bb4b5f117ccf84b9508097cf8"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.9/aliddns_0.0.9_Linux_armv6.tar.gz"
-    sha256 "863f9dd04d3c60d7266b3c78dbaf2f5afbd351a000382e7e0e1812f5ba9aa5e3"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.9/aliddns_0.0.9_Linux_arm64.tar.gz"
-    sha256 "183d0a6a9f8cca5baf4fc7a0271569786ba95010ccf2842edb44079b5a40be27"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.10/aliddns_0.0.10_Linux_x86_64.tar.gz"
+      sha256 "2b0efbb971959c0edca114562209df05c649d5a2d5b99d1e8d9fe005b6a085a3"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.10/aliddns_0.0.10_Linux_armv6.tar.gz"
+      sha256 "f36e55e5eb53bf8af1454a5fb73376f8d34a9158dee875c5ba8aeaa246b5d69a"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.10/aliddns_0.0.10_Linux_arm64.tar.gz"
+      sha256 "c6bdc940caebfb3499c0cb8a9ec48c2eff82c47235453697696966de047ca6ec"
+    end
   end
 
   def install
