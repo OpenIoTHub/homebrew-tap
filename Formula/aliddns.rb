@@ -5,28 +5,28 @@
 class Aliddns < Formula
   desc "Aliyun ddns service"
   homepage "http://github.com/OpenIoTHub"
-  version "0.0.11"
+  version "0.0.12"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.11/aliddns_0.0.11_Darwin_x86_64.tar.gz"
-      sha256 "dc704305bc6a48f23c5e82e2b95fc0d6329a14fc59adcc534fe9cda0eb9b14fd"
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.12/aliddns_0.0.12_Darwin_x86_64.tar.gz"
+      sha256 "553df3c9b80eaa0cd484f170f7caedca05a649b45a41e696d0af2a0cf103589a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.11/aliddns_0.0.11_Linux_x86_64.tar.gz"
-      sha256 "99e2484c7efaa01b6a65ef2f67f82587592512c1dc3eb17f2c651780862c2bfb"
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.12/aliddns_0.0.12_Linux_x86_64.tar.gz"
+      sha256 "fd45154b92739191ad54c36d62a4614b9faaccb9809a86191684ae5f922beeae"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.11/aliddns_0.0.11_Linux_armv6.tar.gz"
-      sha256 "127dfbe243e849f648c939f40f13534f767af0ee491aab310d3aa9b5ebdddf5f"
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.12/aliddns_0.0.12_Linux_armv6.tar.gz"
+      sha256 "852509052e6b562c0c02a3a3f37bee709846a49095ea806a791d2f061eaeeb34"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.11/aliddns_0.0.11_Linux_arm64.tar.gz"
-      sha256 "0b5521f025f7ae3129f76409e3c331c9d5ebd2753302a82ce61051e46f99968a"
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.12/aliddns_0.0.12_Linux_arm64.tar.gz"
+      sha256 "eba8861899358c05bc64c622d07993eb1e3a79b6cb6c64a5d2e35dc4538a3603"
     end
   end
 
