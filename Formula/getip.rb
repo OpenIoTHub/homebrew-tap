@@ -5,24 +5,29 @@
 class Getip < Formula
   desc "OpenIoTHub get my public ip"
   homepage "http://github.com/OpenIoTHub"
-  version "0.1.2"
+  version "0.1.3"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Darwin_x86_64.tar.gz"
-    sha256 "c017f8fea46b8aa4c25a3067b16c81517ea43542a8bd85baf163d09c72eda212"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.3/getip_0.1.3_Darwin_x86_64.tar.gz"
+      sha256 "580028ce5fb3866257bd3b74e88434aa68cf52e5a4d9e85659da3249c7e9e48f"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Linux_x86_64.tar.gz"
-    sha256 "fda4c7295586278a057597c00ae13ca4a8d5e092b687cb7c5f2ce3cfb258cf8e"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Linux_armv6.tar.gz"
-    sha256 "5ce3b62040353883e67abd5e41b8a295c47846cc2a2dc949c90d9d27b319f406"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.2/getip_0.1.2_Linux_arm64.tar.gz"
-    sha256 "3070bb61f892c326c365d09bdaf829469d994b49f7238d6abe4c82a7572a4801"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.3/getip_0.1.3_Linux_x86_64.tar.gz"
+      sha256 "c9a7a3d82157894890d14b95c37585c0e3665d1b8ce7937c1d27cbdb0add7e88"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.3/getip_0.1.3_Linux_armv6.tar.gz"
+      sha256 "b9dfb5cb859884d2f4186cc612809bd348abc91f4ecd4d2b9611eb96c2fa300b"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/OpenIoTHub/getip/releases/download/v0.1.3/getip_0.1.3_Linux_arm64.tar.gz"
+      sha256 "1b9e8c931f8f1658812079288e8704b9e80679939ada326b8d7a97e41161660e"
+    end
   end
 
   def install
