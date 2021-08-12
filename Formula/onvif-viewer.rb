@@ -5,24 +5,29 @@
 class OnvifViewer < Formula
   desc "Onvif Camera Viewer"
   homepage "https://github.com/mDNSService/onvif-viewer"
-  version "1.5"
+  version "1.6"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.5/onvif-viewer_1.5_Darwin_x86_64.tar.gz"
-    sha256 "eef4ce0f45a71e5f79220b6001316b60f09d3ecf20c2b82aec523045a879d815"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.6/onvif-viewer_1.6_Darwin_x86_64.tar.gz"
+      sha256 "495eded62cf7f227bae6a8358a8678ebb8103f998457430f2b96c89c14584275"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.5/onvif-viewer_1.5_Linux_x86_64.tar.gz"
-    sha256 "4d54a26149ceb69055e5e59fa4870994f83eea094d005d19a1ee65c6872fa970"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.5/onvif-viewer_1.5_Linux_armv6.tar.gz"
-    sha256 "21e082df411488d12c46939333d3af2353b9b0a63d188789dd1f2a06a286be7a"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.5/onvif-viewer_1.5_Linux_arm64.tar.gz"
-    sha256 "3f83e488c0bb37666a4685c5e85f27a7bd5e139b1a89417a37ed50bf828441fb"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.6/onvif-viewer_1.6_Linux_x86_64.tar.gz"
+      sha256 "5c995676f6efdb228b08a7630ad9f0334d067702c5035f0da3db1ff501e9100f"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.6/onvif-viewer_1.6_Linux_armv6.tar.gz"
+      sha256 "80daef92e44f15a8463d8e40aa00be0d916f5ca4cce1ba1d62d140dd943dcc48"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.6/onvif-viewer_1.6_Linux_arm64.tar.gz"
+      sha256 "072e637e4885b79a36a70f137a703a966561a47946eb2864fc4e6aa9c9d8f198"
+    end
   end
 
   def install
