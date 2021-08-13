@@ -5,28 +5,28 @@
 class OnvifViewer < Formula
   desc "Onvif Camera Viewer"
   homepage "https://github.com/mDNSService/onvif-viewer"
-  version "1.7"
+  version "1.8"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.7/onvif-viewer_1.7_Darwin_x86_64.tar.gz"
-      sha256 "114b1aa105733cef699b6f388a9dcb45134ab92cab88c3d2484ff0cfd9838bc7"
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.8/onvif-viewer_1.8_Darwin_x86_64.tar.gz"
+      sha256 "65c8efb77974618556bac43a423e79dc063712af677920b5452a6dfa4ebae763"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.7/onvif-viewer_1.7_Linux_x86_64.tar.gz"
-      sha256 "a84754ab3aacc5fe6ed965a0012172a6b0357f77e7e1c3332310e294743399e4"
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.8/onvif-viewer_1.8_Linux_x86_64.tar.gz"
+      sha256 "3dc54382af61985de21b93208482b8f94a32b1c7d1221d36f6264fb424eeec4d"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.7/onvif-viewer_1.7_Linux_armv6.tar.gz"
-      sha256 "4f9d2016a2892882b404122871e9c6ea9c8d4e475dc294d19febb86174c9d334"
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.8/onvif-viewer_1.8_Linux_armv6.tar.gz"
+      sha256 "a7d485346ee1d9fba4f84931d9543eac1c82a655ffbfb131fa5b0b9ff4955afa"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.7/onvif-viewer_1.7_Linux_arm64.tar.gz"
-      sha256 "7b424fbeec89d5afb8402c941f1367b8099fa82df6b27fa1fc6b073ace78f1e0"
+      url "https://github.com/mDNSService/onvif-viewer/releases/download/v1.8/onvif-viewer_1.8_Linux_arm64.tar.gz"
+      sha256 "9e1bc233e6fbec8b291812a60313217213a1d59e77b477efe02896ebea82b470"
     end
   end
 
