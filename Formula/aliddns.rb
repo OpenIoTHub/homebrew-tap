@@ -5,33 +5,52 @@
 class Aliddns < Formula
   desc "Aliyun ddns service"
   homepage "http://github.com/OpenIoTHub"
-  version "0.0.13"
-  bottle :unneeded
+  version "0.0.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.13/aliddns_0.0.13_Darwin_x86_64.tar.gz"
-      sha256 "27f715461aba0e85544cc5a7c09bb99a6a806de4d710bfb632bb82233036dd2a"
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.16/aliddns_0.0.16_darwin_amd64.tar.gz"
+      sha256 "0436f5ed6c867450e1e2814cedc9164bcb46718f8bf2445d369e263a1cf72a96"
+
+      def install
+        bin.install "aliddns"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.16/aliddns_0.0.16_darwin_arm64.tar.gz"
+      sha256 "6b31814d3ee9210e61529e632f560d2d7f52d89fc23be1c6f255a296e60f5aeb"
+
+      def install
+        bin.install "aliddns"
+      end
     end
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.16/aliddns_0.0.16_linux_arm64.tar.gz"
+      sha256 "a7f7a919150a560c5d33e5a2bc782c4af9b4f1b1c65a0bd412b3de22b670f16a"
+
+      def install
+        bin.install "aliddns"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.13/aliddns_0.0.13_Linux_x86_64.tar.gz"
-      sha256 "9e84f656262d7aef2b4e68b51d0bff2abdae02a642f6b15aaffed3a040280083"
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.16/aliddns_0.0.16_linux_amd64.tar.gz"
+      sha256 "ab8ae45b476267ca62c57600c3b9912d5df1c9fea22378fb867e2354cceb3aed"
+
+      def install
+        bin.install "aliddns"
+      end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.13/aliddns_0.0.13_Linux_armv6.tar.gz"
-      sha256 "c8e46f7bc9a0da005024dddfb64c80e4bd1d2ab43c3bf60d4d8e6a3a7d3039af"
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.13/aliddns_0.0.13_Linux_arm64.tar.gz"
-      sha256 "fde7aeed18cde059e785b95e4660a32fb949f0e41f0c0c9267b91cdd63635d10"
-    end
-  end
+      url "https://github.com/OpenIoTHub/aliddns/releases/download/v0.0.16/aliddns_0.0.16_linux_armv6.tar.gz"
+      sha256 "bac5a2059d5342e64319392722cd255e5b6b157362e00f1a5395273566084fca"
 
-  def install
-    bin.install "aliddns"
+      def install
+        bin.install "aliddns"
+      end
+    end
   end
 
   test do
