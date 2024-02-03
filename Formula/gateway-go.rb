@@ -5,20 +5,20 @@
 class GatewayGo < Formula
   desc "OpenIoTHub GateWay"
   homepage "http://github.com/OpenIoTHub"
-  version "0.2.4"
+  version "0.2.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.4/gateway-go_0.2.4_darwin_amd64.tar.gz"
-      sha256 "25924fb78dd94d7781d19b7e1c92377102ab1cbac25056cff3e5d70a08c25bc8"
+    if Hardware::CPU.arm?
+      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.5/gateway-go_0.2.5_darwin_arm64.tar.gz"
+      sha256 "2c0483bb042858401c30d9c2a1814a3d755bc247bb40c1448bc456a0fa2c491c"
 
       def install
         bin.install "gateway-go"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.4/gateway-go_0.2.4_darwin_arm64.tar.gz"
-      sha256 "9e69535132adf57840e57e910383e61ffc95af176c2ed6c0790606a4c7505acf"
+    if Hardware::CPU.intel?
+      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.5/gateway-go_0.2.5_darwin_amd64.tar.gz"
+      sha256 "25f1e201f7f8515dcfcfe2160732c1a34e3277319e557c5488fc2e91706ede3b"
 
       def install
         bin.install "gateway-go"
@@ -27,25 +27,25 @@ class GatewayGo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.4/gateway-go_0.2.4_linux_amd64.tar.gz"
-      sha256 "7627e856d1aa2a66d567aa198989bd01769b93ee0c1df43595b1a2940cdf40e7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.5/gateway-go_0.2.5_linux_arm64.tar.gz"
+      sha256 "67b68165a819aaf19c6ced9fea1034ca1d995f0e680913ef43d2211147dc3e28"
 
       def install
         bin.install "gateway-go"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.4/gateway-go_0.2.4_linux_arm64.tar.gz"
-      sha256 "dfc56cc14468b346e882ca6ea06464d37553602149e932c8a5d91e2069d4b525"
+    if Hardware::CPU.intel?
+      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.5/gateway-go_0.2.5_linux_amd64.tar.gz"
+      sha256 "84dff2e1789e2b2ddc8613aa4b347b8fe0c7be1519ed913c352c89931092e193"
 
       def install
         bin.install "gateway-go"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.4/gateway-go_0.2.4_linux_armv6.tar.gz"
-      sha256 "3dea21bcf19aa9c9773708a56e3e0de7024805b29ad09a2c8f362e11cc5d79a1"
+      url "https://github.com/OpenIoTHub/gateway-go/releases/download/v0.2.5/gateway-go_0.2.5_linux_armv6.tar.gz"
+      sha256 "85bf9c6bf90e5446e50e8c53d9f427f6941903c9f1f377660317a55cfcec32d6"
 
       def install
         bin.install "gateway-go"
