@@ -5,20 +5,20 @@
 class ServerGo < Formula
   desc "OpenIoTHub Server"
   homepage "http://github.com/OpenIoTHub"
-  version "1.2.6"
+  version "1.2.7"
 
   on_macos do
     on_intel do
-      url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.6/server-go_1.2.6_darwin_amd64.tar.gz"
-      sha256 "4af572a005273ec9c5ac6b2d7cdca10a2a2bf45ec85857c07eebe647adbda27a"
+      url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.7/server-go_1.2.7_darwin_amd64.tar.gz"
+      sha256 "6f76d3d4539f2f8cd07a6e32af5697d037afa69bb50811cacccd0b1f1b5a7a9b"
 
       def install
         bin.install "server-go"
       end
     end
     on_arm do
-      url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.6/server-go_1.2.6_darwin_arm64.tar.gz"
-      sha256 "6588d28241c3097e549aa17a7fe5c847daa6cde803c15278a04c9f22b6aaba81"
+      url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.7/server-go_1.2.7_darwin_arm64.tar.gz"
+      sha256 "6a32518f8094bcf13521e349034281fe964aba5dab65eda85ea8fce33eeb59f4"
 
       def install
         bin.install "server-go"
@@ -29,8 +29,8 @@ class ServerGo < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.6/server-go_1.2.6_linux_amd64.tar.gz"
-        sha256 "35dcc1d637f5e256cbf0d7bd99bf47747bc97ee93cc6df16369f8ca7e1fe06fc"
+        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.7/server-go_1.2.7_linux_amd64.tar.gz"
+        sha256 "5df3d6a4c9d30fbdfcd079415f764eba5a40360403280db24bea47e6d2fad856"
 
         def install
           bin.install "server-go"
@@ -39,8 +39,8 @@ class ServerGo < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.6/server-go_1.2.6_linux_armv6.tar.gz"
-        sha256 "072881ef0d916cabe0492498721478c46a5ea7751dee1ed45cdb60e78fa9325e"
+        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.7/server-go_1.2.7_linux_armv6.tar.gz"
+        sha256 "b5f5200bf43781fd26bb44b165b64e5712ef6494214557cfcee7f681ce75aed7"
 
         def install
           bin.install "server-go"
@@ -49,8 +49,8 @@ class ServerGo < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.6/server-go_1.2.6_linux_arm64.tar.gz"
-        sha256 "08968c0af9b86e7ea4bcef7f7475e45df7064027715595b1442c6c26c77d2191"
+        url "https://github.com/OpenIoTHub/server-go/releases/download/v1.2.7/server-go_1.2.7_linux_arm64.tar.gz"
+        sha256 "fb68a08a4407685ec9b3c131de2910f3759b18b909f307668c67237c5ebb907f"
 
         def install
           bin.install "server-go"
